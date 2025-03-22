@@ -295,10 +295,6 @@ section {
   margin: 0 auto;
 }
 
-.app-img img {
-  border-radius: 20px;
-}
-
 .app-text h2 {
   font-size: 1.6rem;
   color: var(--second-color);
