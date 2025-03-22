@@ -279,11 +279,6 @@ section {
   padding: 50px 10%;
 }
 
-.app-text,
-.app-img {
-  flex: 1 1 20rem;
-}
-
 .app-text {
   order: 1;
   text-align: left;
