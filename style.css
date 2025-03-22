@@ -160,7 +160,7 @@ section {
 .heading {
   text-align: center;
   text-transform: uppercase;
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 
 .heading span {
@@ -243,9 +243,12 @@ section {
 }
 
 .about {
+  display: flex;
+  flex-wrap: wrap;
   background: #ebcdc8;
   gap: 1.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .about .heading {
@@ -288,6 +291,7 @@ section {
   order: 2;
   max-width: 300px;
   margin: 0 auto;
+  padding: 15px;
 }
 
 .app-text h2 {
@@ -419,7 +423,7 @@ section.contact {
     padding: 50px 7%;
   }
   .heading {
-    margin-top: 1.5rem;
+    margin-top: 6rem;
   }
 }
 
@@ -438,7 +442,7 @@ section.contact {
     padding: 50px 4%;
   }
   .heading {
-    margin-top: 1rem;
+    margin-top: 6rem;
   }
 }
 
@@ -448,10 +452,10 @@ section.contact {
   }
   section {
     padding: 30px 5%;
-    padding-top: 130px;
+    padding-top: 150px;
   }
   .navbar.active + section {
-    padding-top: 300px;
+    padding-top: 350px;
   }
   .contact {
     padding: 15px 5%;
@@ -538,17 +542,17 @@ section.contact {
     text-align: center;
   }
   .heading {
-    margin-top: 1.5rem;
+    margin-top: 6rem;
   }
 }
 
 @media (max-width: 392px) {
   section {
     padding: 20px 3%;
-    padding-top: 120px;
+    padding-top: 140px;
   }
   .navbar.active + section {
-    padding-top: 280px;
+    padding-top: 330px;
   }
   .contact {
     padding: 10px 3%;
@@ -566,6 +570,6 @@ section.contact {
     max-width: 200px;
   }
   .heading {
-    margin-top: 1rem;
+    margin-top: 6rem;
   }
 }
