@@ -243,17 +243,20 @@ section {
 }
 
 .about {
-  display: flex;
-  flex-wrap: wrap;
   background: #ebcdc8;
   gap: 1.5rem;
   align-items: center;
-  justify-content: center;
+}
+
+.about .heading {
+  flex: 1 1 100%;
+  order: 0;
 }
 
 .about-img,
 .about-text {
   flex: 1 1 20rem;
+  order: 0;
 }
 
 .about-text h2 {
@@ -293,7 +296,7 @@ section {
 }
 
 .app-img img {
-  border-radius: 20px;
+  border-radius: 0 0 0 20px;
 }
 
 .app-text h2 {
@@ -454,7 +457,10 @@ section.contact {
   }
   section {
     padding: 30px 5%;
-    padding-top: 70px;
+    padding-top: 130px;
+  }
+  .navbar.active + section {
+    padding-top: 300px;
   }
   .contact {
     padding: 15px 5%;
@@ -513,7 +519,16 @@ section.contact {
     font-size: 0.9rem;
   }
   .about {
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  .about .heading {
+    order: 1;
+  }
+  .about .about-text {
+    order: 2;
+  }
+  .about .about-img {
+    order: 3;
   }
   .app {
     flex-direction: column;
@@ -532,14 +547,17 @@ section.contact {
     text-align: center;
   }
   .heading {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
   }
 }
 
 @media (max-width: 392px) {
   section {
     padding: 20px 3%;
-    padding-top: 60px;
+    padding-top: 120px;
+  }
+  .navbar.active + section {
+    padding-top: 280px;
   }
   .contact {
     padding: 10px 3%;
@@ -557,6 +575,6 @@ section.contact {
     max-width: 200px;
   }
   .heading {
-    margin-top: 0.3rem;
+    margin-top: 1rem;
   }
 }
