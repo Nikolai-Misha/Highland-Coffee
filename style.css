@@ -61,11 +61,17 @@ header {
 
 .navbar {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  max-width: 70%;
 }
 
-.navbar a {
+.navbar a,
+.navbar .search-bar,
+.navbar .user-menu .bx-user {
   font-size: 1rem;
-  padding: 11px 20px;
+  padding: 11px 15px;
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
@@ -160,7 +166,7 @@ section {
 .heading {
   text-align: center;
   text-transform: uppercase;
-  margin-top: 6rem;
+  margin-bottom: 2rem;
 }
 
 .heading span {
@@ -274,34 +280,39 @@ section {
 
 .app {
   background: #e0d5ca;
+  padding: 50px 10%;
+  padding-top: 120px;
+}
+
+.app .container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 10%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1rem;
 }
 
 .app-text {
-  order: 1;
+  flex: 1 1 50%;
   text-align: left;
-}
-
-.app-img {
-  order: 2;
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 15px;
 }
 
 .app-text h2 {
   font-size: 1.6rem;
   color: var(--second-color);
+  margin-bottom: 1rem;
 }
 
 .app-text p {
-  margin: 2rem 0;
+  margin: 0 0 2rem;
   text-align: justify;
+}
+
+.app-img {
+  flex: 1 1 40%;
+  max-width: 350px;
+  text-align: right;
 }
 
 .btn-group {
@@ -402,6 +413,153 @@ section.contact {
   margin: 0;
 }
 
+/* Thanh tìm kiếm trong navbar */
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 30px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 185px;
+  height: 30px;
+  margin: 0;
+}
+
+.navbar .search-bar input {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  padding: 5px;
+  width: 100%;
+  color: #333;
+  background: transparent;
+}
+
+.navbar .search-bar input::placeholder {
+  color: #999;
+}
+
+.navbar .search-bar .bx-search {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar .search-bar .bx-search:hover {
+  color: var(--second-color);
+}
+
+/* User menu */
+.navbar .user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .user-menu .bx-user {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 11px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar .user-menu .bx-user:hover {
+  color: var(--second-color);
+}
+
+.navbar .user-menu .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  min-width: 120px;
+  z-index: 1000;
+}
+
+.navbar .user-menu .dropdown-menu a {
+  color: var(--second-color);
+  padding: 10px;
+  font-size: 0.9rem;
+  text-transform: none;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+
+.navbar .user-menu .dropdown-menu a:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+
+.navbar .user-menu:hover .dropdown-menu,
+.navbar .user-menu .dropdown-menu.active {
+  display: flex;
+}
+
+/* Form đăng ký/đăng nhập */
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.auth-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-form h2 {
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  background: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-form button:hover {
+  background: var(--second-color);
+}
+
+.auth-form button[type="button"] {
+  background: #666;
+}
+
+/* Responsive */
 @media (max-width: 1150px) {
   header {
     padding: 12px 7%;
@@ -420,9 +578,7 @@ section.contact {
   }
   .app {
     padding: 50px 7%;
-  }
-  .heading {
-    margin-top: 6rem;
+    padding-top: 120px;
   }
 }
 
@@ -438,9 +594,7 @@ section.contact {
   }
   .app {
     padding: 50px 4%;
-  }
-  .heading {
-    margin-top: 6rem;
+    padding-top: 120px;
   }
 }
 
@@ -468,7 +622,7 @@ section.contact {
   #menu-icon {
     display: block;
   }
-  header .navbar {
+  .navbar {
     position: absolute;
     top: 70px;
     right: 0;
@@ -486,11 +640,31 @@ section.contact {
   .navbar.active {
     transform: translateX(0);
   }
-  .navbar a {
+  .navbar a,
+  .navbar .search-bar,
+  .navbar .user-menu .bx-user {
     padding: 1rem;
     display: block;
     color: var(--second-color);
     font-size: 0.9rem;
+  }
+  .navbar .search-bar {
+    margin: 10px auto;
+    width: 80%;
+    max-width: none;
+  }
+  .navbar .user-menu {
+    margin: 10px auto;
+  }
+  .navbar .user-menu .bx-user {
+    color: var(--second-color);
+    padding: 1rem;
+  }
+  .navbar .user-menu .dropdown-menu {
+    top: 100%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .home-text span {
     font-size: 1.2rem;
@@ -523,23 +697,29 @@ section.contact {
     order: 3;
   }
   .app {
-    flex-direction: column;
-    text-align: center;
     padding: 30px 5%;
+    padding-top: 120px;
   }
-  .app-img {
-    max-width: 250px;
-    order: 1;
+  .app .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .app-text {
-    order: 2;
+    flex: 1 1 100%;
     text-align: center;
   }
   .app-text p {
     text-align: center;
   }
-  .heading {
-    margin-top: 6rem;
+  .app-img {
+    flex: 1 1 100%;
+    max-width: 250px;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .btn-group {
+    justify-content: center;
   }
 }
 
@@ -553,7 +733,7 @@ section.contact {
   .contact {
     padding: 10px 3%;
   }
-  header .navbar {
+  .navbar {
     width: 40%;
   }
   .social a .bx {
@@ -561,11 +741,9 @@ section.contact {
   }
   .app {
     padding: 20px 3%;
+    padding-top: 120px;
   }
   .app-img {
     max-width: 200px;
-  }
-  .heading {
-    margin-top: 6rem;
   }
 }
