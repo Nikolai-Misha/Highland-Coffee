@@ -1,1 +1,3 @@
-Building Highland Coffee website...
+Build and deploy Highland Coffee modern website
+
+https://nikolai-misha.github.io/Highland-Coffee/
