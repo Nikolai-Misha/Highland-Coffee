@@ -274,7 +274,7 @@ section {
 
 .app {
   background: #e0d5ca;
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
@@ -491,6 +491,7 @@ section.contact {
     display: block;
     color: var(--second-color);
     font-size: 0.9rem;
+    text-align: right;
   }
   .home-text span {
     font-size: 1.2rem;
@@ -505,13 +506,10 @@ section.contact {
     margin-top: 6rem;
   }
   .heading h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .heading span {
     font-size: 0.9rem;
-  }
-  .about {
-    flex-direction: column;
   }
   .about .heading {
     order: 1;
@@ -533,9 +531,6 @@ section.contact {
   }
   .app-text {
     order: 2;
-    text-align: center;
-  }
-  .app-text p {
     text-align: center;
   }
   .heading {

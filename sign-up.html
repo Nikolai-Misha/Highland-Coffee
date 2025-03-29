@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highland Coffee</title>
+  <link rel="stylesheet" href="sign-up.css">
+  <link rel="icon" href="images/Highland Coffee.ico" type="image/x-icon">
+</head>
+<body>
+    <form id="signup-form">
+        <legend class="form-title">Đăng kí</legend>
+        <label for="name">Họ và tên</label>
+        <input type="text" id="name" placeholder="Điền tên của bạn" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Điền email của bạn" required>
+        <label for="password">Tạo mật khẩu</label>
+        <input type="password" id="password" placeholder="Tạo một mật khẩu mới cho riêng bạn" required>
+        <label for="password-confirm">Xác thực mật khẩu lần cuối</label>
+        <input type="password" id="password-confirm" placeholder="Nhập lại mật khẩu bạn đã tạo nhé" required>
+        <div class="checkbox-container">
+            <input type="checkbox" id="agree">
+            <label for="agree">Tôi đồng ý với các điều khoản dịch vụ.</label>
+        </div>
+        <button type="submit">Bắt đầu sử dụng</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="sign-up.js"></script>
+
+</body>
+</html>
