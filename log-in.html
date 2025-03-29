@@ -1,0 +1,25 @@
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highland Coffee</title>
+  <link rel="stylesheet" href="log-in.css">
+  <link rel="icon" href="images/Highland Coffee.ico" type="image/x-icon">
+</head>
+<body>
+    <form id="login-form">
+        <legend class="form-title">Đăng nhập</legend>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Điền email sử dụng của riêng bạn" required>
+        <label for="password">Tạo mật khẩu</label>
+        <input type="password" id="password" placeholder="Nhập mật khẩu của riêng bạn" required>
+        <button type="submit">Quay trở lại</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="log-in.js"></script>
+
+</body>
+</html>

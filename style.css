@@ -45,7 +45,7 @@ header {
   align-items: center;
   justify-content: space-between;
   background: #701919;
-  box-shadow: 0 4px 41px rgba(55, 29, 14, 0.14);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   padding: 15px 10%;
   transition: padding 0.3s ease;
 }
