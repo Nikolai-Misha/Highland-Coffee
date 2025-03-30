@@ -10,7 +10,7 @@ function signup(event) {
   let passwordConfirm = passwordconfirmInput.value;
   
   if (password != passwordConfirm){
-    alert("Incorrect password");
+    alert("Vui lòng xác thực lại mật khẩu.");
   }
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
@@ -21,7 +21,7 @@ function signup(event) {
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    alert("Fail to create account");
+    alert("Tạo tài khoản thất bại, vui lòng kiểm tra kĩ lưỡng email hoặc mật khẩu.")
   });
 }
 signupForm.addEventListener("submit", signup);
