@@ -16,7 +16,7 @@ firebase.auth().signInWithEmailAndPassword(email, password)
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    alert("Tạo tài khoản thất bại, vui lòng kiểm tra kĩ lưỡng email hoặc mật khẩu.")
+    alert("Đăng nhập tài khoản thất bại, vui lòng kiểm tra lại email hoặc mật khẩu.")
   });
 }
 signinForm.addEventListener("submit", signin);
